@@ -1,0 +1,8 @@
+name: Java Validate
+
+on:
+  push:
+
+jobs:
+  call_workflow:
+    uses: test-gihub-app/github-workflow-template/.github/workflows/ci-test.yaml@main
