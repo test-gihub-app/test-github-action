@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          repository: test-gihub-app/github-workflow-template
 
       - uses: test-gihub-app/github-workflow-template/.github/actions/action-test@main
