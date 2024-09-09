@@ -2,7 +2,14 @@ name: Java Validate
 
 on:
   push:
+  workflow_call:
 
 jobs:
-  call_workflow:
-    uses: test-gihub-app/github-workflow-template/.github/workflows/ci-test.yaml@main
+  start:
+    name: Start
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: test-gihub-app/github-workflow-template/.github/actions/action-test@main
